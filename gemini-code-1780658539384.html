@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart School Initiative Progress Tracker</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+        h1 { color: #1e293b; margin: 0 0 5px 0; font-size: 24px; font-weight: 800; }
+        h2 { color: #64748b; margin: 0 0 25px 0; font-size: 14px; font-weight: 400; }
+        .progress-container {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 20px auto;
+        }
+        .progress-text {
+            position: absolute;
+            top: 52%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .percent { font-size: 28px; font-weight: 800; color: #1e293b; margin: 0; }
+        .label { font-size: 12px; color: #64748b; margin: 0; }
+        .amount { font-size: 18px; font-weight: 700; color: #10b981; margin: 5px 0 0 0; }
+        .milestone-box {
+            background: #fff;
+            border: 1px solid #cbd5e0;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: left;
+            margin-bottom: 25px;
+        }
+        .milestone-title { color: #0f766e; font-weight: 700; margin-top: 0; margin-bottom: 10px; font-size: 14px; }
+        ul { list-style: none; padding: 0; margin: 0; }
+        li { font-size: 12px; color: #334155; margin-bottom: 8px; padding-left: 15px; position: relative; }
+        li::before { content: "•"; position: absolute; left: 0; color: #10b981; font-weight: bold; }
+        .contributors-title { font-size: 15px; font-weight: 700; color: #1e293b; margin-bottom: 15px; }
+        .contributor-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #334155;
+            padding: 6px 10px;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+        .contributor-row:last-child { border-bottom: none; }
+        .c-name { font-weight: 500; }
+        .c-amount { font-weight: 700; color: #10b981; }
+        footer { font-size: 11px; color: #64748b; margin-top: 25px; font-style: italic; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>SMART SCHOOL INITIATIVE</h1>
+    <h2>Anna Government Model School, Patteeswaram</h2>
+
+    <div class="progress-container">
+        <!-- SVG Progress Ring (42% of 440 circumference is ~185 dashoffset) -->
+        <svg width="160" height="160" viewBox="0 0 160 160">
+            <circle cx="80" cy="80" r="70" fill="none" stroke="#e2e8f0" stroke-width="10" />
+            <circle cx="80" cy="80" r="70" fill="none" stroke="#10b981" stroke-width="10" 
+                    stroke-dasharray="440" stroke-dashoffset="255" stroke-linecap="round" transform="rotate(-90 80 80)"/>
+        </svg>
+        <div class="progress-text">
+            <p class="percent">42%</p>
+            <p class="label">Funded</p>
+        </div>
+    </div>
+    <p class="amount">₹6,351 Collected</p>
+
+    <div class="milestone-box">
+        <p class="milestone-title">Infrastructure Tasks Accomplished: 🛠️</p>
+        <ul>
+            <li>School Branding: 49 Educational posters aligned & printed</li>
+            <li>Digital Space: Official custom Domain Name purchased</li>
+            <li>Green Campus: 5 Cement potted plants added along corridor</li>
+            <li>Classroom Essentials: Total coverage for WiFi & cleaning kits</li>
+        </ul>
+    </div>
+
+    <p class="contributors-title">Top Contributors Highlight</p>
+    <div id="contributors">
+        <div class="contributor-row"><span class="c-name">⭐ Jagadeesan.S</span><span class="c-amount">₹1,500</span></div>
+        <div class="contributor-row"><span class="c-name">⭐ Sathiyavathi.P</span><span class="c-amount">₹1,000</span></div>
+        <div class="contributor-row"><span class="c-name">⭐ Uma.S</span><span class="c-amount">₹1,000</span></div>
+        <div class="contributor-row"><span class="c-name">⭐ Muthulakshmi.G</span><span class="c-amount">₹1,000</span></div>
+        <div class="contributor-row"><span class="c-name">⭐ Anitha.V</span><span class="c-amount">₹500</span></div>
+    </div>
+
+    <footer>Thank you for investing in our students' future! 🚀</footer>
+</div>
+
+</body>
+</html>
